@@ -1,10 +1,11 @@
+'use client';
 import { updateDefaultAccount } from '@/actions/account';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
 import useFetch from '@/hooks/use-fetch';
 import { ArrowDownRight, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const AccountCard = ({ account }) => {
   const { name, type, balance, id, isDefault } = account;
